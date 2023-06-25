@@ -3,6 +3,7 @@ package com.nbu.MedRecord.Controllers;
 import com.nbu.MedRecord.Models.entity.Doctor;
 import com.nbu.MedRecord.exceptions.NotFoundException;
 import com.nbu.MedRecord.services.DoctorService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -13,6 +14,7 @@ public class DoctorRestController {
     private final DoctorService doctorService;
 
     // Constructor with dependency injection
+    @Autowired
     public DoctorRestController(DoctorService doctorService) {
         this.doctorService = doctorService;
     }

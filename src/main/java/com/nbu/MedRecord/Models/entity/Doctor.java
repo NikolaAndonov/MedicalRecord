@@ -17,6 +17,9 @@ public class Doctor {
 
     private String specialty;
 
+    @OneToOne
+    private User user;
+
     @OneToMany
     @Column(name = "personal_patients")
     private List<Patient> personalPatients;

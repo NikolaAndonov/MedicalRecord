@@ -1,61 +1,36 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
   <meta charset="UTF-8">
-  <title>Медицинска информационна система</title>
-  <link rel="stylesheet" type="text/css" href="/styles.css">
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <title>Медицински здравен център
+  </title>
 </head>
 <body>
-<h1>Медицинска информационна система</h1>
-<div id="content">
-  <!-- Тук ще се показва съдържанието на страницата -->
-  <h1>Welcome to our site!</h1>
-  <div id="buttonsDiv" style="display: none;">
-    <p>Select an option:</p>
-    <a href="/patients"><button>Go to Patient Page</button></a>
-    <a href="/doctors"><button>Go to Doctor Page</button></a>
+<div class="container">
+  <div class="logo">
+    <!-- Your SVG logo goes here -->
   </div>
-
-
-  <div id="loginDiv">
-    <h2>Login</h2>
-    <form action="/login" method="post">
-      <label for="loginUsername">Username:</label>
-      <input type="text" id="loginUsername" name="username">
-      <label for="loginPassword">Password:</label>
-      <input type="password" id="loginPassword" name="password">
-      <input type="submit" value="Login">
-    </form>
-    <button id="switchToRegister">Switch to Register</button>
+  <form method="post" action="/login">
+    <div class="input-field">
+      <label>Username</label>
+      <label>
+        <input type="user" name="user" placeholder="Username" required>
+      </label>
+    </div>
+    <div class="input-field">
+      <label>Password</label>
+      <label>
+        <input type="password" name="password" placeholder="••••••••" required>
+      </label>
+    </div>
+    <button type="submit" class="login">Login</button>
+  </form>
+  <div class="footer">
+    <span>Sign up</span>
+    <span>Forgot Password?</span>
   </div>
-
-  <div id="registerDiv" style="display: none;">
-    <h2>Register</h2>
-    <form action="/register" method="post">
-      <label for="registerUsername">Username:</label>
-      <input type="text" id="registerUsername" name="username">
-      <label for="registerPassword">Password:</label>
-      <input type="password" id="registerPassword" name="password">
-      <input type="submit" value="Register">
-    </form>
-    <button id="switchToLogin">Switch to Login</button>
-  </div>
-
-  <script>
-    $(document).ready(function() {
-      $("#switchToRegister").click(function() {
-        $("#loginDiv").hide();
-        $("#registerDiv").show();
-      });
-
-      $("#switchToLogin").click(function() {
-        $("#registerDiv").hide();
-        $("#loginDiv").show();
-      });
-    });
-  </script>
 </div>
-<script src="/scripts.js"></script>
 </body>
 </html>
