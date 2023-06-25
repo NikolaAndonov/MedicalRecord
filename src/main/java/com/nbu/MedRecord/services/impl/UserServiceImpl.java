@@ -2,6 +2,7 @@ package com.nbu.MedRecord.services.impl;
 
 import com.nbu.MedRecord.Models.entity.User;
 import com.nbu.MedRecord.repositories.UserRepository;
+import com.nbu.MedRecord.services.UserService;
 import org.mindrot.jbcrypt.BCrypt;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.ComponentScan;
@@ -9,7 +10,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 @ComponentScan
-public class UserServiceImpl {
+public class UserServiceImpl implements UserService {
 
     private UserRepository userRepository;
 
