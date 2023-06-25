@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Пациенти</title>
+  <link rel="stylesheet" type="text/css" th:href="@{/css/styles.css}">
+</head>
+<body>
+<h1>Всички пациенти</h1>
+<table>
+  <thead>
+  <tr>
+    <th>Име</th>
+    <th>ЕГН</th>
+    <th>Здравни осигуровки</th>
+    <th>Личен лекар</th>
+    <th>История на заболявания</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr th:each="patient : ${patients}">
+    <td th:text="${patient.name}"></td>
+    <td th:text="${patient.identificationNumber}"></td>
+    <td th:text="${patient.insurancePaid ? 'Да' : 'Не'}"></td>
+    <td th:text="${patient.personalDoctor.name}"></td>
+    <td><a th:href="@{/patients/{id}/history(id=${patient.id})}">Покажи история</a></td>
+  </tr>
+  </tbody>
+</table>
+</body>
+</html>

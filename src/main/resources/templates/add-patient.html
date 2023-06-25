@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Добавяне на пациент</title>
+  <link rel="stylesheet" type="text/css" th:href="@{/css/styles.css}">
+</head>
+<body>
+<h1>Добавяне на пациент</h1>
+<form th:action="@{/patients/add}" th:object="${patient}" method="post">
+  <label for="name">Име:</label><br>
+  <input type="text" id="name" th:field="*{name}"><br>
+  <label for="egn">ЕГН:</label><br>
+  <input type="text" id="egn" th:field="*{egn}"><br>
+  <label for="insurance">Здравни осигуровки:</label><br>
+  <input type="checkbox" id="insurance" th:field="*{healthInsurancePaid}"><br>
+  <input type="submit" value="Добави">
+</form>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>История на болести</title>
+  <link rel="stylesheet" type="text/css" th:href="@{/css/styles.css}">
+</head>
+<body>
+<h1>История на болести</h1>
+<table>
+  <thead>
+  <tr>
+    <th>Име на заболяването</th>
+    <th>Начална дата</th>
+    <th>Крайна дата</th>
+    <th>Лечение</th>
+    <th>Бележки</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr th:each="history : ${patientHistory}">
+    <td th:text="${history.diseaseName}"></td>
+    <td th:text="${history.startDate}"></td>
+    <td th:text="${history.endDate}"></td>
+    <td th:text="${history.treatment}"></td>
+    <td th:text="${history.notes}"></td>
+  </tr>
+  </tbody>
+</table>
+</body>
+</html>
