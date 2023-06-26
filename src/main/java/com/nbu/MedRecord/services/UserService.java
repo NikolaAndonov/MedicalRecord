@@ -4,8 +4,11 @@ import com.nbu.MedRecord.Models.entity.User;
 
 public interface UserService {
 
-    boolean registerUser(String email, String password);
+    boolean registerUser(String username, String password);
 
-    User login(String email, String password);
+    User login(String username, String password);
+
+    User getCurrentUser();
+
 }
 

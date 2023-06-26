@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+  <title>Profile Page</title>
+  <!-- include your css file here -->
+</head>
+<body>
+<!-- include your css file here  ${user.username} -->
+<h1>Welcome, <span th:text="${user.username}"></span></h1>
+
+<button onclick="window.location.href='/patients';">Show Patients</button>
+<button onclick="window.location.href='/doctors';">Show Doctors</button>
+
+<form action="/search" method="get">
+  <label>
+    <input type="text" name="query" required>
+  </label>
+  <button type="submit">Search</button>
+</form>
+</body>
+</html>

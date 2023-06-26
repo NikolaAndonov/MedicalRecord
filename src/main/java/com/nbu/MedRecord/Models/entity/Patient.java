@@ -1,8 +1,10 @@
 package com.nbu.MedRecord.Models.entity;
 
-import jakarta.persistence.*;
 
-import java.util.List;
+import org.springframework.stereotype.Indexed;
+
+import javax.persistence.*;
+import javax.persistence.Table;
 
 
 @Entity

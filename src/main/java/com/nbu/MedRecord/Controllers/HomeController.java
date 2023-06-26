@@ -21,5 +21,10 @@ public class HomeController {
         return "doctor";
     }
 
+    @RequestMapping("/profile")
+    public String profile() {
+        return "profile";
+    }
+
 }
 

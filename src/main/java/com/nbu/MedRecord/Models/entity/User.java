@@ -1,6 +1,6 @@
 package com.nbu.MedRecord.Models.entity;
 
-import jakarta.persistence.*;
+import javax.persistence.*;
 
 @Entity
 public class User {

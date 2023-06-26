@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Search Results</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+  <h1>Search Results</h1>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Name</th>
+      <th scope="col">Identification Number</th>
+      <!-- Add more columns as necessary -->
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="patient : ${patients}">
+      <td th:text="${patient.id}"></td>
+      <td th:text="${patient.name}"></td>
+      <td th:text="${patient.identificationNumber}"></td>
+      <!-- Add more data cells as necessary -->
+    </tr>
+    </tbody>
+  </table>
+</div>
+</body>
+</html>
